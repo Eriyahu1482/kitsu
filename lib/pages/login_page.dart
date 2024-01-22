@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:kitsu/widgets/button_widget.dart';
 import 'package:kitsu/widgets/text_field_widget.dart';
 
 class LoginPage extends StatefulWidget {
@@ -19,7 +18,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
      return Scaffold(
       backgroundColor: const Color.fromRGBO(36, 36, 36, 1),
-      body: Padding(      
+      body:SingleChildScrollView(child: Padding(      
         padding: const EdgeInsets.symmetric(horizontal: 50),
         child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -55,10 +54,11 @@ class _LoginPageState extends State<LoginPage> {
               child: Image.asset('assets/logo.png')
               ),
 
-              TextFieldWidget(),
+             const TextFieldWidget(),
 
       ],
       ),
+    )
     )
     );
   }

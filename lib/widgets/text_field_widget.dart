@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kitsu/widgets/button_widget.dart';
 
 class TextFieldWidget extends StatefulWidget {
   const TextFieldWidget({super.key});
@@ -81,7 +82,7 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
                decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(color: const Color.fromRGBO(2, 217, 173, 1), width: 2),),
-              child: _input(_emailController, 'Введите почту', false),
+              child: _input(_emailController, '  Введите Email', false),
              ),
              const SizedBox(height: 20),
 
@@ -89,16 +90,18 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
               decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(color: const Color.fromRGBO(2, 217, 173, 1), width: 2),),
-              child: _input(_passwordController, 'Введите пароль', true),
+              child: _input(_passwordController, '  Введите пароль', true),
              ),
              const SizedBox(height: 70),
-            Container(
-              height: 50,
-              width: MediaQuery.of(context).size.width,
-             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),),
-              child: _loginButton(buttonText, _userAction),
-            )
+            ButtonWidget(
+        buttonName: 'ВОЙТИ',
+         buttonColor: const Color.fromRGBO(2, 217, 173, 1),
+          onTap: () {
+              setState(() {
+                _showLogin = false;
+              });
+            },)
+            
           ],
         ),
       );
@@ -106,38 +109,15 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
     return Column(
       children:<Widget>[
       _showLogin
-      ? Column(
-        children: [
+      ? 
+      Column(
+          children: [
           _form('ВОЙТИ', _userAction),
-          const SizedBox(height: 8),
-          GestureDetector(
-            onTap: () {
-              setState(() {
-                _showLogin = false;
-              });
-            },
-            child: const Padding(
-              padding: EdgeInsets.only(left: 206),
-              
-            ),
-          )
-        ],
+          ]
       )
       : Column(
           children: [
-          _form('ВОЙТИ', _userAction),
-          const SizedBox(height: 8),
-          GestureDetector(
-            onTap: () {
-              setState(() {
-                _showLogin = false;
-              });
-            },
-            child: const Padding(
-              padding: EdgeInsets.only(left: 206),
-              
-            ),
-          )
+          _form('ВОЙТИ', _userAction),    
           ]
       )
       ]

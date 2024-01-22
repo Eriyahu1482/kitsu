@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kitsu/pages/homepage.dart';
+import 'package:kitsu/pages/home_page.dart';
 import 'package:kitsu/pages/login_or_register_page.dart';
 
 class MyApp extends StatelessWidget {

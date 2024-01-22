@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kitsu/widgets/login_page_widget.dart';
+import 'package:kitsu/pages/login_page.dart';
+import 'package:kitsu/pages/register_page.dart';
 
 class LoginOrRegisterPage extends StatefulWidget {
   const LoginOrRegisterPage({super.key});
@@ -21,7 +22,7 @@ class _LoginOrRegisterPage extends State<LoginOrRegisterPage> {
   @override
   Widget build(BuildContext context) {
     if (showLoginPage) {
-      return LoginPage(onTap: toggelPages);
+      return RegisterPage(onTap: toggelPages);
     } else {
       return LoginPage(onTap: toggelPages);
     }
