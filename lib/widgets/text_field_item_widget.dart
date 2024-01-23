@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:kitsu/widgets/alert_dialog_heper.dart';
 
-class TextFieldWidget1 extends StatelessWidget {
+class TextFieldWidget extends StatelessWidget {
   final TextEditingController controller;
   final String hintText;
   final Icon icon;
   final bool isObsText;
   final TextInputType inputType;
 
-  const TextFieldWidget1(
+  const TextFieldWidget(
       {super.key,
       required this.controller,
       required this.hintText,
@@ -23,7 +23,7 @@ class TextFieldWidget1 extends StatelessWidget {
       child: TextFormField(
         style: const TextStyle(
               fontSize: 15,
-              color: Colors.white,
+              color:  Color.fromRGBO(2, 217, 173, 1),
             ),
         cursorColor: const Color.fromRGBO(2, 217, 173, 1),
         controller: controller,

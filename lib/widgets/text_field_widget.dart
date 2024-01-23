@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:kitsu/widgets/button_widget.dart';
 
-class TextFieldWidget extends StatefulWidget {
-  const TextFieldWidget({super.key});
+class TextFieldWidget1 extends StatefulWidget {
+  const TextFieldWidget1({super.key});
 
   @override
-  State<TextFieldWidget> createState() => _TextFieldWidgetState();
+  State<TextFieldWidget1> createState() => _TextFieldWidgetState1();
 }
 
-class _TextFieldWidgetState extends State<TextFieldWidget> {
+class _TextFieldWidgetState1 extends State<TextFieldWidget1> {
   TextEditingController _emailController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
 
