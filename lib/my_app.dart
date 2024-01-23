@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:kitsu/pages/home_page.dart';
-import 'package:kitsu/pages/login_or_register_page.dart';
+import 'package:kitsu/pages/auth_page.dart';
+import 'package:kitsu/pages/login_page.dart';
+import 'package:kitsu/pages/register_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -9,9 +10,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      home: const AuthPage(),
       routes: {
-        HomePage.routeName:(context) => LoginOrRegisterPage(),
+        // HomePage.routeName: (context) => const HomePage(),
+        LoginPage.routeName: (context) => const LoginPage(),
+        RegisterPage.routeName: (context) => const RegisterPage(),
       },
     );
   }
