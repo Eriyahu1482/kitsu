@@ -22,9 +22,9 @@ class TextFieldWidget extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 10),
       child: TextFormField(
         style: const TextStyle(
-              fontSize: 15,
-              color:  Color.fromRGBO(2, 217, 173, 1),
-            ),
+          fontSize: 15,
+          color: Color.fromRGBO(2, 217, 173, 1),
+        ),
         cursorColor: const Color.fromRGBO(2, 217, 173, 1),
         controller: controller,
         obscureText: isObsText,
@@ -33,38 +33,36 @@ class TextFieldWidget extends StatelessWidget {
           if (value == null || value.isEmpty) {
             return 'Введите $hintText';
           }
-        if (hintText == 'Актуальный email' && !validateEmail(value)) {
+          if (hintText == 'Актуальный email' && !validateEmail(value)) {
             return 'Введите коректный email';
-        }
-        return null;
+          }
+          return null;
         },
         decoration: InputDecoration(
           border: InputBorder.none,
           enabledBorder: const OutlineInputBorder(
-              borderRadius: BorderRadius.all(
-                Radius.circular(10),
-              ),
-              borderSide: BorderSide(color: Color.fromRGBO(2, 217, 173, 1), width: 2),
-        ),
-        focusedBorder: const OutlineInputBorder(
-          borderRadius: BorderRadius.all(
-            Radius.circular(10)
+            borderRadius: BorderRadius.all(
+              Radius.circular(10),
+            ),
+            borderSide:
+                BorderSide(color: Color.fromRGBO(2, 217, 173, 1), width: 2),
           ),
-           borderSide: BorderSide(color: Color.fromRGBO(2, 217, 173, 1), width: 2),
-        ),
-        hintStyle: const TextStyle(
-                  fontSize: 15,
-                  color: Colors.white30,
-                  fontWeight: FontWeight.w500),
+          focusedBorder: const OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(10)),
+            borderSide:
+                BorderSide(color: Color.fromRGBO(2, 217, 173, 1), width: 2),
+          ),
+          hintStyle: const TextStyle(color: Colors.transparent),
           prefixIcon: icon,
           hintText: hintText,
           labelText: hintText,
-          fillColor: Colors.transparent,
+          labelStyle: const TextStyle(
+              fontSize: 15,
+              color: Color.fromRGBO(2, 217, 173, 1),
+              fontWeight: FontWeight.w300),
           filled: true,
         ),
       ),
     );
-    
   }
 }
-
